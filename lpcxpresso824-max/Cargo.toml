@@ -1,0 +1,13 @@
+[package]
+name    = "lpcxpresso824-max"
+version = "0.1.0"
+authors = ["Hanno Braun <hanno@braun-robotics.com>"]
+
+[dependencies]
+cortex-m-rt = "*"
+lpc82x-hal  = { git = "https://github.com/braun-robotics/rust-lpc82x-hal.git", features = ["rt"] }
+
+[profile.release]
+codegen-units = 1
+lto           = true
+opt-level     = 3
